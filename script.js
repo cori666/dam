@@ -52,7 +52,7 @@ const bindCommunityMarquee = () => {
   communityTrack.classList.remove("is-marquee");
 
   const loopWidth = firstCloneCard.offsetLeft;
-  const duration = Math.max(loopWidth / 60, 18);
+  const duration = Math.max(loopWidth / 80, 18);
 
   communityTrack.style.setProperty("--community-loop-width", `${loopWidth}px`);
   communityTrack.style.setProperty("--community-marquee-duration", `${duration}s`);
