@@ -20,7 +20,7 @@ button { border: 0; background: none; color: inherit; font: inherit; cursor: poi
 .site-header__inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .site-header__logo-image { width: 200px; max-width: 42vw; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .22)); }
 .site-header__nav { display: flex; align-items: center; justify-content: flex-end; gap: 20px; margin-left: auto; }
-.site-header__nav a, .site-header__link, .site-footer__policy a { font-size: 15px;
+.site-header__nav a, .site-header__link, .site-footer__policy a { font-size: clamp(14px, 2vw, 17px);
   font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
 .site-header__nav a, .site-header__link { position: relative; color: rgba(244, 237, 227, 0.9); }
 .site-header__nav a::after { content: ""; position: absolute; left: 0; bottom: -8px; width: 100%;
@@ -161,8 +161,9 @@ body.popup-open {overflow: hidden;}
   .site-header__nav { display: flex; position: fixed; top: 0; right: -100%;
      width: 280px; max-width: 80vw; height: 100vh; padding: 100px 40px 40px;
      background: rgba(12, 9, 7, 0.98); border-left: 1px solid rgba(212, 182, 130, 0.12);
-     flex-direction: column; align-items: flex-start; gap: 18px; z-index: 100;
+     flex-direction: column; align-items: flex-start; gap: 10px; z-index: 100;
      transition: right .4s var(--ease), box-shadow .4s var(--ease); }
+      .site-header__nav a{font-size: clamp(16px, 2vw, 18px);  letter-spacing: 0.15em;} 
   .site-header__nav.is-open { right: 0; box-shadow: -24px 0 60px rgba(0, 0, 0, 0.32); justify-content:start;}
   .site-header__link { display: none; }
   .hero-slide__inner { background-position: 62% center; }
@@ -177,8 +178,6 @@ body.popup-open {overflow: hidden;}
   .video-section__media {height: 62vh; }
   .community-track { margin:50px 0; gap: 18px; width: max-content; min-width: max-content; padding-right: 0; padding-bottom: 6px; will-change: transform; }
   .event-head, .site-footer__bottom { flex-direction: column; align-items: flex-start; }
-  .site-header.is-menu-open {background: rgba(12, 9, 7, 0.96);border-bottom-color: rgba(212, 182, 130, 0.12);}
-  .site-header.is-menu-open .site-header__inner {background: rgba(12, 9, 7, 0.96);}
   .site-header.is-menu-open .site-header__nav {display: flex; background: rgba(12, 9, 7, 0.96);}
  .business-card {flex: 0 0 300px; width: 300px; height: 320px; min-height: 320px;}
   .business-card:nth-child(2n) { margin-top: 20px;}
